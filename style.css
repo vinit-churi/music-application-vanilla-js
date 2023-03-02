@@ -1,0 +1,82 @@
+body {
+    margin: 0px;
+    /* by default with of the body is 100% */
+    height: 100vh;
+    height: 100svh; /* we give this for mobile devices */
+    display: grid;
+    grid-template-columns: 210px auto 200px;
+    grid-template-rows: auto 100px;
+    font-family: "Tilt Neon", cursive;
+    background-color: #dddced;
+}
+/* global styles */
+ul {
+    padding: 0px;
+    width: 90%;
+    margin: 0px auto;
+}
+
+.nav-list-item {
+    list-style: none;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    padding: 10px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.nav-list-item p {
+    margin: 0px;
+}
+.nav-list-item.active {
+    background-color: aliceblue;
+}
+.list-title {
+    color: #b5b5c4;
+    width: 90%;
+    margin: 10px auto;
+}
+i {
+    color: #987dcd;
+}
+#logo {
+    height: max-content;
+    width: 90%;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+#logo img {
+    width: 160%;
+    height: 100%;
+    object-fit: cover;
+}
+/* music player styles */
+
+#left-sidebar {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    /* background-color: #dddced; */
+}
+
+main {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    background-color: #e8e9f2;
+    border-radius: 16px;
+    margin: 10px;
+}
+#right-sidebar {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    /* background-color: ; */
+}
+#music-player-container {
+    grid-column: 1/4;
+    grid-row: 2/3;
+    background-color: #e8e9f2;
+    border-radius: 16px;
+    margin: 10px;
+}

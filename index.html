@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music player application</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!-- we first have to describe the 4 boxes -->
+    <!-- use semantic html tag as much as possible that has meaning -->
+    <aside id="left-sidebar">
+        <div id="logo">
+            <img src="./images/logo idea 4.svg" alt="">
+        </div>
+        <div class="list-container">
+            <p class="list-title">Recommended</p>
+            <ul>
+                <li class="nav-list-item"><i class="fa-solid fa-compact-disc"></i>
+                    <p class="nav-list-text">For you</p>
+                </li>
+                <li class="nav-list-item"><i class="fa-solid fa-list"></i>
+                    <p class="nav-list-text">Library</p>
+                </li>
+                <li class="nav-list-item"><i class="fa-solid fa-list"></i>
+                    <p class="nav-list-text">Explore</p>
+                </li>
+            </ul>
+        </div>
+        <div class="list-container">
+            <p class="list-title">My music</p>
+            <ul>
+                <li class="nav-list-item active">
+                    <i class="fa-regular fa-heart"></i>
+                    <p class="nav-list-text">Liked Song</p>
+                </li>
+                <li class="nav-list-item">
+                    <i class="fa-regular fa-folder-open"></i>
+                    <p class="nav-list-text">Albums</p>
+                </li>
+                <li class="nav-list-item">
+                    <i class="fa-solid fa-microphone-lines"></i>
+                    <p class="nav-list-text">Artists</p>
+                </li>
+                <li class="nav-list-item">
+                    <i class="fa-solid fa-clock"></i>
+                    <p class="nav-list-text">Recent</p>
+                </li>
+            </ul>
+        </div>
+        <div class="list-container">
+            <p class="list-title">Playlist</p>
+            <ul>
+                <li class="nav-list-item"><i class="fa-solid fa-layer-group"></i>
+                    <p class="nav-list-text">Hip-hop</p>
+                </li>
+            </ul>
+        </div>
+    </aside> <!-- because the ui element is located aside i.e  -->
+    <main></main> <!-- main content of the website -->
+    <aside id="right-sidebar"></aside>
+    <aside id="music-player-container"></aside>
+</body>
+
+</html>
