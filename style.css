@@ -1,10 +1,15 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
 body {
     margin: 0px;
     /* by default with of the body is 100% */
     height: 100vh;
     height: 100svh; /* we give this for mobile devices */
     display: grid;
-    grid-template-columns: 210px auto 200px;
+    grid-template-columns: 210px auto 300px;
     grid-template-rows: auto 100px;
     font-family: "Tilt Neon", cursive;
     background-color: #dddced;
@@ -65,12 +70,27 @@ main {
     grid-column: 2/3;
     grid-row: 1/2;
     background-color: #e8e9f2;
-    border-radius: 16px;
-    margin: 10px;
+    border-radius: 3px;
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+    margin: 10px 10px 0px 0px;
+    min-height: 0px;
+    overflow-y: auto;
 }
+.main-container {
+    height: 200px;
+    width: 100%;
+    background-color: transparent;
+    min-height: 100%;
+    /* margin: 10px; */
+}
+
 #right-sidebar {
     grid-column: 3/4;
     grid-row: 1/2;
+    background-color: #e8e9f2;
+    border-radius: 16px;
+    margin: 10px 10px 0px 0px;
     /* background-color: ; */
 }
 #music-player-container {
@@ -79,4 +99,128 @@ main {
     background-color: #e8e9f2;
     border-radius: 16px;
     margin: 10px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10px 0px 20px;
+    align-items: center;
+}
+nav form {
+    background-color: white;
+    height: max-content;
+    display: flex;
+    padding: 10px 15px;
+    gap: 10px;
+    align-items: center;
+    border-radius: 12px;
+}
+nav form input[type="text"] {
+    border: none;
+    height: 20px;
+    font-size: 16px;
+}
+nav form input[type="text"]:focus {
+    outline: none;
+}
+nav form input[type="text"]::placeholder {
+    opacity: 0.5;
+    font-size: 14px;
+}
+#login-button {
+    background-color: white;
+    border-radius: 20px;
+    padding: 10px 30px;
+    cursor: pointer;
+    transition: 0.3s ease color, background-color 0.3s linear;
+}
+#login-button:hover {
+    background-color: #987dcd;
+    color: white;
+}
+#profile-button {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-right: 20px;
+}
+#profile-button img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #987dcd;
+}
+
+/* page styling */
+.page {
+    background-color: rebeccapurple;
+    margin: 10px 20px;
+    min-height: 500px;
+}
+
+/* footer styles */
+.footer-icons {
+    display: flex;
+    gap: 10px;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px;
+    background-color: white;
+
+    /* background-color: #e0adc7; */
+}
+footer p {
+    text-align: center;
+    color: #fbfbfb;
+    background-color: #7c50d4;
+    background-color: #513589;
+    padding: 20px 0px;
+    margin: 0px;
+}
+
+/* custom scroll bar */
+/* Firefox */
+.vertical-scroll {
+    position: relative;
+    /* left: -6px; */
+    scrollbar-width: thin;
+    scrollbar-color: #7c50d4 #fbfbfb;
+}
+
+/* Chrome, Edge and Safari */
+.vertical-scroll::-webkit-scrollbar {
+    width: 6px;
+    width: 6px;
+}
+.vertical-scroll::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background-color: #fbfbfb;
+}
+
+.vertical-scroll::-webkit-scrollbar-track:hover {
+    background-color: #fbfbfb;
+}
+
+.vertical-scroll::-webkit-scrollbar-track:active {
+    background-color: #e8e9f2;
+}
+
+.vertical-scroll::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: #7c50d4;
+}
+
+.vertical-scroll::-webkit-scrollbar-thumb:hover {
+    background-color: #6b46b6;
+}
+
+.vertical-scroll::-webkit-scrollbar-thumb:active {
+    background-color: #513589;
+}
+
+.hide {
+    display: none;
 }

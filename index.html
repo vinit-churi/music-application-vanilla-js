@@ -13,11 +13,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
+    <script type="module" src="./js/index.js" defer></script>
 </head>
 
 <body>
-    <!-- we first have to describe the 4 boxes -->
-    <!-- use semantic html tag as much as possible that has meaning -->
     <aside id="left-sidebar">
         <div id="logo">
             <img src="./images/logo idea 4.svg" alt="">
@@ -25,48 +24,89 @@
         <div class="list-container">
             <p class="list-title">Recommended</p>
             <ul>
-                <li class="nav-list-item"><i class="fa-solid fa-compact-disc"></i>
+                <li id="for-you-link" data-link-to="for-you" class="nav-list-item active"><i
+                        class="fa-solid fa-compact-disc"></i>
                     <p class="nav-list-text">For you</p>
                 </li>
-                <li class="nav-list-item"><i class="fa-solid fa-list"></i>
-                    <p class="nav-list-text">Library</p>
+                <li id="liked-song-link" data-link-to="liked-song" class="nav-list-item">
+                    <i class="fa-regular fa-heart"></i>
+                    <p class="nav-list-text">Liked Song</p>
                 </li>
-                <li class="nav-list-item"><i class="fa-solid fa-list"></i>
-                    <p class="nav-list-text">Explore</p>
+
+                <li id="search-link" data-link-to="search" class="nav-list-item">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <p class="nav-list-text">Search</p>
                 </li>
             </ul>
         </div>
         <div class="list-container">
             <p class="list-title">My music</p>
             <ul>
-                <li class="nav-list-item active">
-                    <i class="fa-regular fa-heart"></i>
-                    <p class="nav-list-text">Liked Song</p>
+                <li id="library-link" data-link-to="library" class="nav-list-item"><i class="fa-solid fa-list"></i>
+                    <p class="nav-list-text">Library</p>
                 </li>
-                <li class="nav-list-item">
-                    <i class="fa-regular fa-folder-open"></i>
-                    <p class="nav-list-text">Albums</p>
-                </li>
-                <li class="nav-list-item">
-                    <i class="fa-solid fa-microphone-lines"></i>
-                    <p class="nav-list-text">Artists</p>
-                </li>
-                <li class="nav-list-item">
+                <li id="recent-link" data-link-to="recent" class="nav-list-item">
                     <i class="fa-solid fa-clock"></i>
                     <p class="nav-list-text">Recent</p>
                 </li>
             </ul>
         </div>
-        <div class="list-container">
-            <p class="list-title">Playlist</p>
-            <ul>
-                <li class="nav-list-item"><i class="fa-solid fa-layer-group"></i>
-                    <p class="nav-list-text">Hip-hop</p>
-                </li>
-            </ul>
+    </aside>
+    <main class="vertical-scroll">
+        <div class="main-container">
+            <nav>
+                <form>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search">
+                </form>
+                <div class="nav-buttons">
+                    <div id="login-button" class="hide">Login</div>
+                    <div id="profile-button">
+                        <img src="https://th.bing.com/th/id/OIP.Lm8ZCjm8mygoy_GdUfSTCQHaHa?pid=ImgDet&rs=1" alt="user">
+                        <p>Hello, <span id="user-name">User</span></p>
+                    </div>
+                </div>
+            </nav>
+            <div class="pages-container">
+                <div id="for-you" class="page">
+                    <div data-page-loader-id="for-you" class="loader">
+
+                    </div>
+                </div>
+                <div id="liked-song" class="page hide">
+                    <div data-page-loader-id="liked-song" class="loader">
+
+                    </div>
+                </div>
+                <div id="search" class="page hide">
+                    <div data-page-loader-id="search" class="loader">
+
+                    </div>
+                </div>
+                <div id="library" class="page hide">
+                    <div data-page-loader-id="library" class="loader">
+
+                    </div>
+                </div>
+                <div id="recent" class="page hide">
+                    <div data-page-loader-id="recent" class="loader">
+
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <div class="footer-icons">
+                    <i class="fa-brands fa-google"></i>
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-tiktok"></i>
+                </div>
+                <p>
+                    @2023 Copyright purple music app by Vinit 🎶
+                </p>
+            </footer>
         </div>
-    </aside> <!-- because the ui element is located aside i.e  -->
-    <main></main> <!-- main content of the website -->
+    </main>
     <aside id="right-sidebar"></aside>
     <aside id="music-player-container"></aside>
 </body>
