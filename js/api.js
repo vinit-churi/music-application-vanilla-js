@@ -4,9 +4,9 @@ const API_KEY = "MWE1MjlmMzEtMjNiOC00NzU1LWI2MTYtZmMyZjUzYzUyOWIz";
  *
  * @return {Object} An object containing data and error properties.
  */
-export const getTopTracks = async () => {
+export const getTopTracks = async (limit) => {
     try {
-        const fetchURL = `https://napi-v2-2-cloud-run-b3gtd5nmxq-uw.a.run.app/v2.2/tracks/top?apikey=${API_KEY}&limit=6`;
+        const fetchURL = `https://napi-v2-2-cloud-run-b3gtd5nmxq-uw.a.run.app/v2.2/tracks/top?apikey=${API_KEY}&limit=${limit}`;
         let data = await fetch(fetchURL);
         data = await data.json();
         return { data, error: null };

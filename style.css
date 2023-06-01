@@ -155,9 +155,83 @@ nav form input[type="text"]::placeholder {
 
 /* page styling */
 .page {
-    background-color: rebeccapurple;
+    /* background-color: rebeccapurple; */
     margin: 10px 20px;
     min-height: 500px;
+}
+
+.songOptionImg {
+    pointer-events: none;
+}
+
+.songOptionEl {
+    cursor: pointer;
+    background-color: white;
+    height: 40px;
+    width: 40px;
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    -webkit-user-select: none; /* For Safari */
+    user-select: none;
+}
+.firstSong {
+    position: relative;
+    width: max-content;
+}
+.hero {
+    display: flex;
+    gap: 10px;
+}
+.hero-songs-list-item {
+    display: flex;
+    /* align-items: center; */
+}
+/* .hero-songs-list-item */
+.hero-songs-list-item p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 70px;
+}
+.firstSong p {
+    position: absolute;
+    top: 20px;
+    left: 0px;
+    right: 0px;
+    width: max-content;
+    margin: 0px auto;
+    color: white;
+    font-size: 22px;
+}
+.firstSong img {
+    height: 350px;
+    width: 370px;
+    border-radius: 16px;
+    object-fit: cover;
+    filter: grayscale(100%);
+}
+.songsOptions {
+    position: absolute;
+    background-color: #dddced;
+    border-radius: 12px;
+    width: 200px;
+    top: calc(100% + 10px);
+    left: 0px;
+    z-index: 20;
+}
+.songsOptions p {
+    text-align: center;
+    width: 70%;
+    margin: 5px auto;
+    padding: 10px;
+    cursor: pointer;
+}
+.songsOptions p ~ p {
+    border-top: 2px solid silver;
 }
 
 /* footer styles */
@@ -176,7 +250,7 @@ footer p {
     text-align: center;
     color: #fbfbfb;
     background-color: #7c50d4;
-    background-color: #513589;
+    /* background-color: #513589; */
     padding: 20px 0px;
     margin: 0px;
 }
