@@ -178,24 +178,56 @@ nav form input[type="text"]::placeholder {
     -webkit-user-select: none; /* For Safari */
     user-select: none;
 }
-.firstSong {
-    position: relative;
-    width: max-content;
-}
 .hero {
     display: flex;
-    gap: 10px;
+    justify-content: space-between;
+}
+.firstSong {
+    position: relative;
+    width: 50%;
+}
+.heroSongsList {
+    width: 45%;
+    /* background-color: yellow; */
 }
 .hero-songs-list-item {
     display: flex;
     /* align-items: center; */
 }
-/* .hero-songs-list-item */
-.hero-songs-list-item p {
+.index {
+    flex: 0 0 30px;
+    margin: 0px;
+}
+.hero-songs-list-item ~ .hero-songs-list-item {
+    margin-top: 20px;
+}
+.hero-songs-list-item .fa-regular.fa-heart {
+    flex: 0 0 30px;
+}
+.songInfoEl {
+    /* flex: 0 0 270px; */
+}
+.songInfoEl p {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 70px;
+    max-width: 250px;
+    margin: 0px;
+}
+.songInfoEl p ~ p {
+    margin-top: 8px;
+}
+.songOptionEl {
+    /* flex: 0 0 40px; */
+    margin-left: auto;
+}
+/* .hero-songs-list-item */
+.hero-songs-list-item p {
+    /* white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 250px;
+    margin: 0px; */
 }
 .firstSong p {
     position: absolute;
@@ -208,8 +240,8 @@ nav form input[type="text"]::placeholder {
     font-size: 22px;
 }
 .firstSong img {
-    height: 350px;
-    width: 370px;
+    height: 390px;
+    width: 100%;
     border-radius: 16px;
     object-fit: cover;
     filter: grayscale(100%);
@@ -218,16 +250,16 @@ nav form input[type="text"]::placeholder {
     position: absolute;
     background-color: #dddced;
     border-radius: 12px;
-    width: 200px;
+    width: 160px;
     top: calc(100% + 10px);
-    left: 0px;
+    right: 0px;
     z-index: 20;
 }
 .songsOptions p {
     text-align: center;
     width: 70%;
     margin: 5px auto;
-    padding: 10px;
+    padding: 10px 0px;
     cursor: pointer;
 }
 .songsOptions p ~ p {
