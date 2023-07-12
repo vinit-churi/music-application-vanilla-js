@@ -139,3 +139,8 @@ function launchSongOptions(songId, songOptionEl) {
     songsOptions.append(playNowOption, addToPlayListOption, addToQueueOption);
     songOptionEl.append(songsOptions);
 }
+
+
+function renderArtistsSection(container, data){
+
+}
